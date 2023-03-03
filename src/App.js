@@ -1,17 +1,11 @@
-
-import './App.css';
-import AddTask from './components/AddTask';
-import Header from './components/Header';
-import Tasks from './components/Tasks';
-
+import "./App.css";
+import Header from "./components/Header";
 
 function App() {
   return (
-   <>
-   <Header/>
-   <AddTask/>
-   <Tasks/>
-   </>
+    <div className="App">
+      <Header />
+    </div>
   );
 }
 
