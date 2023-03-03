@@ -32,7 +32,7 @@ const handleSubmit=(e)=> {
           value="Save Task"
         ></input>
       </form>
-      <p className="text-center">No task to show...</p>
+      {(data.length<1) && <p className="text-center">No task to show...</p>}
     </div>
   );
 };
