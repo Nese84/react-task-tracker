@@ -4,13 +4,14 @@ import Button from "./Button";
 import Tasks from "./Tasks";
 
 const Header = () => {
-  const [show, setShow] = useState(true)
+  const [data, setData] = useState([])  
+  const [show, setShow] = useState(true);
   return (
     <div className="container">
       <h3 className="text-center">Task Tracker</h3>
-      <Button show={show} setShow={setShow}/>
-      <p className="text-center ">No tasks to show...</p>
-    {  <Tasks />}
+      <Button show={show} setShow={setShow} />
+     {!show && <p className="text-center ">No tasks to show...</p>}
+      {show && <Tasks data={data} setData={setData} />}
       <AddTask />
     </div>
   );
